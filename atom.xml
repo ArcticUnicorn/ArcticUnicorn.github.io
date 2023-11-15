@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-11-15T16:34:16.531Z</updated>
+  <updated>2023-11-15T16:49:19.620Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,62 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JVM二-垃圾回收</title>
+    <link href="http://example.com/2023/11/16/jvm-er-la-ji-hui-shou/"/>
+    <id>http://example.com/2023/11/16/jvm-er-la-ji-hui-shou/</id>
+    <published>2023-11-15T16:46:16.000Z</published>
+    <updated>2023-11-15T16:49:19.620Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;JVM-内存分配与回收简介&quot;&gt;&lt;a href=&quot;#JVM-内存分配与回收简介&quot; class=&quot;headerlink&quot; title=&quot;JVM 内存分配与回收简介&quot;&gt;&lt;/a&gt;JVM 内存分配与回收简介&lt;/h1&gt;&lt;p&gt;Java</summary>
+        
+      
+    
+    
+    
+    <category term="Java" scheme="http://example.com/categories/Java/"/>
+    
+    
+    <category term="JVM" scheme="http://example.com/tags/JVM/"/>
+    
+    <category term="Java" scheme="http://example.com/tags/Java/"/>
+    
+    <category term="垃圾收集" scheme="http://example.com/tags/%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JVM一-内存结构</title>
+    <link href="http://example.com/2023/11/16/jvm-yi-nei-cun-jie-gou/"/>
+    <id>http://example.com/2023/11/16/jvm-yi-nei-cun-jie-gou/</id>
+    <published>2023-11-15T16:42:50.000Z</published>
+    <updated>2023-11-15T16:45:30.561Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h1&gt;&lt;p&gt;对于 Java 程序而言，在虚拟机自动内存管理机制下，不再需要像 C/C++ 那样为每一个 new 操作去写对应的 delete/free</summary>
+        
+      
+    
+    
+    
+    <category term="Java" scheme="http://example.com/categories/Java/"/>
+    
+    
+    <category term="java" scheme="http://example.com/tags/java/"/>
+    
+    <category term="JVM" scheme="http://example.com/tags/JVM/"/>
+    
+  </entry>
   
   <entry>
     <title>Java基础知识三</title>
@@ -37,9 +93,9 @@
     <category term="Java基础" scheme="http://example.com/categories/Java%E5%9F%BA%E7%A1%80/"/>
     
     
-    <category term="Java基础" scheme="http://example.com/tags/Java%E5%9F%BA%E7%A1%80/"/>
-    
     <category term="JVM" scheme="http://example.com/tags/JVM/"/>
+    
+    <category term="Java基础" scheme="http://example.com/tags/Java%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
