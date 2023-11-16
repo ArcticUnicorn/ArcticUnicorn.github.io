@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-11-16T08:35:50.694Z</updated>
+  <updated>2023-11-16T12:11:25.713Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Envoy基础</title>
+    <link href="http://example.com/2023/11/16/envoy-ji-chu/"/>
+    <id>http://example.com/2023/11/16/envoy-ji-chu/</id>
+    <published>2023-11-16T12:00:35.000Z</published>
+    <updated>2023-11-16T12:11:25.713Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Envoy是什么？&quot;&gt;&lt;a href=&quot;#Envoy是什么？&quot; class=&quot;headerlink&quot; title=&quot;Envoy是什么？&quot;&gt;&lt;/a&gt;Envoy是什么？&lt;/h2&gt;&lt;p&gt;Envoy 是一个用 C++ 开发的高性能代理，Envoy 是一种 L7</summary>
+        
+      
+    
+    
+    
+    <category term="Envoy" scheme="http://example.com/categories/Envoy/"/>
+    
+    
+    <category term="Envoy" scheme="http://example.com/tags/Envoy/"/>
+    
+    <category term="代理" scheme="http://example.com/tags/%E4%BB%A3%E7%90%86/"/>
+    
+    <category term="架构" scheme="http://example.com/tags/%E6%9E%B6%E6%9E%84/"/>
+    
+    <category term="微服务" scheme="http://example.com/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
+    
+  </entry>
   
   <entry>
     <title>Docker镜像</title>

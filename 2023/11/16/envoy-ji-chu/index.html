@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Java基础知识三, Java,k8s,istio,linux,net">
-    <meta name="description" content="类的生命周期类的加载过程包括了加载、验证、准备、解析、初始化共五个阶段，加载完成之后还有使用和卸载两个阶段。在进行类加载的五个阶段中，加载、验证、准备和初始化这四个阶段发生的顺序是确定的，而解析阶段则不一定，该阶段在某些情况下可以在初始化阶">
+    <meta name="keywords" content="Envoy基础, Java,k8s,istio,linux,net">
+    <meta name="description" content="Envoy是什么？Envoy 是一个用 C++ 开发的高性能代理，Envoy 是一种 L7 代理和通信总线，专为大型的现代面向服务的架构而设计。官网为https://www.envoyproxy.io/, 其为开源项目，源码 github地">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Java基础知识三 | ArcticUnicorn</title>
+    <title>Envoy基础 | ArcticUnicorn</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -357,12 +357,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Java基础知识三</h1>
+                    <h1 class="description center-align post-title">Envoy基础</h1>
                 </div>
             </div>
         </div>
@@ -386,12 +386,20 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/JVM/">
-                                <span class="chip bg-color">JVM</span>
+                            <a href="/tags/Envoy/">
+                                <span class="chip bg-color">Envoy</span>
                             </a>
                         
-                            <a href="/tags/Java%E5%9F%BA%E7%A1%80/">
-                                <span class="chip bg-color">Java基础</span>
+                            <a href="/tags/%E4%BB%A3%E7%90%86/">
+                                <span class="chip bg-color">代理</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%9E%B6%E6%9E%84/">
+                                <span class="chip bg-color">架构</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/">
+                                <span class="chip bg-color">微服务</span>
                             </a>
                         
                     </div>
@@ -402,8 +410,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Java%E5%9F%BA%E7%A1%80/" class="post-category">
-                                Java基础
+                            <a href="/categories/Envoy/" class="post-category">
+                                Envoy
                             </a>
                         
                     </div>
@@ -424,14 +432,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.7k
+                    3.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    9 分
+                    11 分
                 </div>
                 
 
@@ -446,110 +454,56 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="类的生命周期"><a href="#类的生命周期" class="headerlink" title="类的生命周期"></a>类的生命周期</h1><p>类的加载过程包括了<code>加载</code>、<code>验证</code>、<code>准备</code>、<code>解析</code>、<code>初始化</code>共五个阶段，加载完成之后还有使用和卸载两个阶段。在进行类加载的五个阶段中，<code>加载</code>、<code>验证</code>、<code>准备</code>和<code>初始化</code>这四个阶段发生的顺序是确定的，而解析阶段则不一定，该阶段在某些情况下可以在初始化阶段之后开始，这是为了支持Java语言的运行时绑定(也成为动态绑定或晚期绑定)。另外注意这里的几个阶段是按顺序开始，而不是按顺序进行或完成，因为这些阶段通常都是互相交叉地混合进行的，通常在一个阶段执行的过程中调用或激活另一个阶段。</p>
-<p><img src="https://raw.githubusercontent.com/zodical416/picto/master/20220131111329.png"></p>
-<h1 id="类的加载"><a href="#类的加载" class="headerlink" title="类的加载"></a>类的加载</h1><p>这是类加载过程的第一个阶段，在该阶段，JVM 需要查找并加载类的二进制数据，主要需要完成以下三件事情:</p>
+                <h2 id="Envoy是什么？"><a href="#Envoy是什么？" class="headerlink" title="Envoy是什么？"></a>Envoy是什么？</h2><p>Envoy 是一个用 C++ 开发的高性能代理，Envoy 是一种 L7 代理和通信总线，专为大型的现代面向服务的架构而设计。官网为<a target="_blank" rel="noopener" href="https://www.envoyproxy.io/">https://www.envoyproxy.io/</a>, 其为开源项目，源码 github地址为:<a target="_blank" rel="noopener" href="https://github.com/envoyproxy/envoy%E3%80%82">https://github.com/envoyproxy/envoy。</a><br><img src="https://seeklogo.com/images/E/envoy-proxy-logo-AA21B06AE5-seeklogo.com.png"></p>
+<h2 id="Envoy提供的功能？"><a href="#Envoy提供的功能？" class="headerlink" title="Envoy提供的功能？"></a>Envoy提供的功能？</h2><p>网络对于应用程序来说应该是透明的，当网络和应用程序出现问题时，应该很容易确定问题的源头。当然要实现上述目标是非常困难的。Envoy 试图通过提供以下高级功能来实现这一目标:</p>
 <ul>
-<li>通过全类名获取定义此类的二进制字节流（将 class 文件加载到内存）</li>
-<li>将这个字节流所代表的静态存储结构转化为方法区的运行时数据结构。（将静态数据结构转化成方法区中运行时的数据结构）</li>
-<li>在Java堆中生成一个代表这个类的java.lang.Class对象，作为对方法区中这些数据的访问入口。</li>
+<li><b>非侵入架构:</b> Envoy 是一个独立的进程，设计为伴随每个应用程序服务一起运行。所有 Envoy 实例形成一个透明的通信网格，每个应用程序通过 localhost 发送和接收消息，不需要知道网络拓扑。对服务的实现语言也完全无感知，这种模式也被称为 Sidecar 模式。</li>
+<li><b>L3/L4 过滤器架构:</b> Envoy 的核心是一个 L3/L4 层的网络代理。可插拔的过滤器链机制允许编写不同的 TCP/UDP 代理任务的过滤器，并将其插入到主服务器中。而且已经内置支持了各种任务的过滤器，例如原始 TCP 代理、UDP 代理、HTTP 代理、TLS 客户端证书身份验证、Redis、MongoDB、Postgres 等。</li>
+<li><b>HTTP L7 过滤器架构:</b> HTTP 是现代应用程序架构的关键组件，因此 Envoy 支持了一个额外的 HTTP L7 过滤器层。HTTP 过滤器可以被插入到 HTTP 连接管理子系统中，执行不同的任务，如缓存、速率限制、路由/转发、嗅探 Amazon 的 DynamoDB 等。</li>
+<li><b>顶级的 HTTP/2 支持:</b> 在 HTTP 模式下运行时，Envoy 同时支持 HTTP/1.1 和 HTTP/2。Envoy 可以作为透明的 HTTP/1.1 到 HTTP/2 双向代理运行。这意味着可以连接任何组合的 HTTP/1.1 和 HTTP/2 客户端与目标服务器。推荐的服务到服务配置在所有 Envoy 之间使用 HTTP/2 创建持久连接网格，请求和响应可以在该连接上进行多路复用。</li>
+<li><b>HTTP/3 支持(目前处于 alpha 版):</b>从 Envoy 1.19.0 版本开始，Envoy 现在支持上游和下游的 HTTP/3，而且可以在任何方向上进行 HTTP/1.1、HTTP/2 和 HTTP/3 之间的转换。</li>
+<li><b>HTTP L7 路由:</b>在 HTTP 模式下运行时，Envoy 支持路由子系统，该子系统能够根据路径、权限、内容类型、运行时值等路由和重定向请求。在使用 Envoy 作为前端/边缘代理时，此功能非常有用，但在构建服务到服务的网格时也可以利用它。</li>
+<li><b>gRPC 支持:</b>gRPC 是 Google 的一个 RPC 框架，使用 HTTP/2 或更高版本作为底层多路复用传输。Envoy 支持用作 gRPC 请求和响应的路由和负载均衡基础所需的所有 HTTP/2 功能，这两个系统非常互补。</li>
+<li><b>可观测性:</b>Envoy 的主要目标是使网络透明，可以生成许多流量方面的统计数据，这是其它代理软件很难取代的地方，内置 stats 模块，可以集成诸如 prometheus/statsd 等监控方案。还可以集成分布式追踪系统，对请求进行追踪。</li>
+<li><b>服务发现和动态配置:</b>Envoy 可以选择使用一组分层的动态配置 API 来进行集中管理。这些层向 Envoy 提供了关于后端集群中的主机、后端集群自身、HTTP 路由、监听套接字和加密材料的动态更新。对于更简单的部署，可以通过 DNS 解析（甚至完全跳过）来完成后端主机发现，并且进一步的层可以由静态配置文件替代。</li>
+<li><b>健康检查:</b>构建 Envoy 网格的推荐方法是将服务发现视为最终一致的过程。Envoy 包含一个健康检查子系统，可以选择对上游服务集群执行主动健康检查。然后，Envoy 使用服务发现和健康检查信息的结合来确定健康的负载均衡目标。Envoy 还通过异常值检测子系统支持被动健康检查。</li>
+<li><b>高级负载均衡:</b>分布式系统中不同组件之间的负载均衡是一个复杂的问题。由于 Envoy 是一个独立的代理而不是库，因此可以独立实现高级负载均衡以供任何应用程序访问。目前 Envoy 支持自动重试、熔断、通过外部速率限制服务进行全局速率限制、异常检测等。</li>
+<li><b>前端/边缘代理支持:</b>在边缘使用相同的软件有很大的好处（可观察性、管理、相同的服务发现和负载均衡算法等）。Envoy 的功能集使其非常适合作为大多数现代 Web 应用程序用例的边缘代理。这包括 TLS 终止、HTTP/1.1、HTTP/2 和 HTTP/3 支持以及 HTTP L7 路由。</li>
+<li><b>最佳的可观测性:</b> 如上所述，Envoy 的主要目标是使网络透明化。但是，问题在网络层面和应用层面都可能会出现。Envoy 为所有子系统提供了强大的统计支持。目前支持的统计数据输出端是 statsd（以及兼容的提供程序），但是接入其他不同的统计数据输出端并不困难。统计数据也可以通过管理端口进行查看，Envoy 还支持通过第三方提供者进行分布式跟踪。</li>
 </ul>
-<p><img src="https://raw.githubusercontent.com/zodical416/picto/master/20220131113438.png"></p>
-<p>相对于类加载的其他阶段而言，加载阶段(准确地说，是加载阶段获取类的二进制字节流的动作)是可控性最强的阶段，因为开发人员既可以使用系统提供的类加载器来完成加载，也可以自定义自己的类加载器来完成加载。</p>
-<p>加载阶段完成后，虚拟机外部的 二进制字节流 就按照虚拟机所需的格式存储在方法区之中，而且在Java堆中也创建一个java.lang.Class类的对象，这样便可以通过该对象访问方法区中的这些数据。</p>
-<p>类加载器并不需要等到某个类被“首次主动使用”时再加载它，JVM规范允许类加载器在预料某个类将要被使用时就预先加载它，如果在预先加载的过程中遇到了.class文件缺失或存在错误，类加载器必须在程序首次主动使用该类时才报告错误(LinkageError错误)，如果这个类一直没有被程序主动使用，那么类加载器就不会报告错误。</p>
-<blockquote>
-<p>加载.class文件的方式</p>
+<h2 id="术语"><a href="#术语" class="headerlink" title="术语"></a>术语</h2><ul>
+<li><b>Host:</b>Envoy 中主机是逻辑网络应用程序。一个物理硬件可能运行多个主机，只要每个主机可以独立进行寻址。</li>
+<li><b>Downstream:</b>下游主机连接到 Envoy，发送请求并接收响应。</li>
+<li><b>Upstream(上游):</b>上游主机接收来自 Envoy 的连接和请求并返回响应。</li>
+<li><b>Listener(侦听器):</b>侦听器是一个带有名称的网络位置（例如端口、unix domain socket 等），下游客户端可以连接到该位置。Envoy 暴露一个或多个监听器，供下游主机连接。</li>
+<li><b>Cluster(集群):</b>一个集群是一组逻辑上相似的上游主机，Envoy 连接到这些主机。Envoy 通过服务发现来发现集群的成员。它还可以通过主动健康检查来确定集群成员的健康状况。Envoy 根据负载均衡策略确定将请求路由到哪个集群成员。</li>
+<li><b>Mesh(网格):</b>一组主机协同工作，提供一致的网络拓扑结构。在这里 Envoy Mesh 是指一组 Envoy 代理，它们构成了由多种不同服务和应用程序平台组成的分布式系统的消息传递基础。</li>
+<li><b>Runtime configuration(运行时配置):</b>与 Envoy 一起部署的实时配置系统。可以更改配置设置，影响操作而无需重新启动 Envoy 或更改主要配置。</li>
+<li><b>Listener filter：</b>Listener 使用 listener filter（监听器过滤器）来操作链接的元数据。它的作用是在不更改 Envoy 的核心功能的情况下，添加更多的集成功能。Listener filter 的 API 相对简单，因为这些过滤器最终是在新接受的套接字上运行。在链中可以互相衔接以支持更复杂的场景，例如调用速率限制。Envoy 已经包含了多个监听器过滤器。</li>
+<li><b>Http Route Table:</b>HTTP 的路由规则，例如请求的域名，Path 符合什么规则，转发给哪个 Cluster。</li>
+<li><b>Health checking:</b>健康检查会与 SDS 服务发现配合使用。但是，即使使用其他服务发现方式，也有相应需要进行主动健康检查的情况。</li>
+</ul>
+<h2 id="架构"><a href="#架构" class="headerlink" title="架构"></a>架构</h2><p>Envoy 架构图如下:<br><img src="https://jsdelivr.icloudnative.io/gh/yangchuansheng/imghosting/img/20200504160047.png"><br>Envoy 采用单进程多线程架构</p>
+<p>一个独立的 primary 线程负责控制各种零散的协调任务，而一些 worker 线程则负责执行监听、过滤和转发任务。<br>一旦侦听器接受连接，该连接就会将其生命周期绑定到一个单独的 worker 线程。这使得 Envoy 的大部分工作基本上是单线程来处理的，只有少量更复杂的代码处理工作线程之间的协调。<br>通常情况下 Envoy 实现了 100% 非阻塞。对于大多数工作负载，我们建议将 worker 线程的数量配置为机器上的硬件线程数量。</p>
 <ul>
-<li>从本地系统中直接加载</li>
-<li>通过网络下载.class文件</li>
-<li>从zip，jar等归档文件中加载.class文件</li>
-<li>从专有数据库中提取.class文件</li>
-<li>将Java源文件动态编译为.class文件</li>
+<li><b>大致流程</b>：<br>Envoy 进程中运行着一系列 Inbound/Outbound 监听器（Listener），Inbound 代理入站流量，Outbound 代理出站流量。Listener 的核心就是过滤器链（FilterChain），链中每个过滤器都能够控制流量的处理流程。Envoy 接收到请求后，会先走 FilterChain，通过各种 L3/L4/L7 Filter 对请求进行处理，然后再路由到指定的集群，并通过负载均衡获取一个目标地址，最后再转发出去。其中每一个环节可以静态配置，也可以动态服务发现，也就是所谓的 xDS，这里的 x 是一个代词，是 lds、rds、cds、eds、sds 的总称，即服务发现，后 2 个字母 ds 就是 discovery service。</li>
+<li><b>请求流程详解</b><ul>
+<li>1.在工作线程上运行的 Envoy 监听器，接受来自下游的 TCP 连接。<br><img src="https://www.envoyproxy.io/docs/envoy/v1.22.6/_images/lor-listeners.svg"></li>
+<li>2.监听过滤器链被创建并运行后。它可以提供 SNI 和 pre-TLS 信息。一旦完成后， 监听器将匹配网络过滤器链。每个监听器可能具有多个过滤器链，这些过滤器链是在目标 IP CIDR 范围、SNI、ALPN、源端口等的某种组合上匹配。传输套接字（在我们的例子中为 TLS 传输套接字）与此过滤器链相关联。<br><img src="https://www.envoyproxy.io/docs/envoy/v1.22.6/_images/lor-listener-filters.svg"></li>
+<li>3.在进行网络读取时，TLS 传输套接字将从 TCP 连接读取的数据进行解密，以进行进一步处理。<br><img src="https://www.envoyproxy.io/docs/envoy/v1.22.6/_images/lor-transport-socket.svg"></li>
+<li>4.网络过滤器链已创建并运行。与监听过滤器一样，Envoy 将通过 Network::FilterManagerImpl 实例化其过滤器工厂中的一系列网络过滤器。<br><img src="https://www.envoyproxy.io/docs/envoy/v1.22.6/_images/lor-network-filters.svg"><br>HTTP 最重要的过滤器是 HTTP 连接管理器，它是链中的最后一个网络过滤器。它负责创建 HTTP/2 编解码器并管理 HTTP 筛选器链。在我们的示例中，这是唯一的网络过滤器。一个使用多个网络过滤器的网络过滤器链的示例如下：<br><img src="https://www.envoyproxy.io/docs/envoy/v1.22.6/_images/lor-network-read.svg"><br>在响应路径上，以与请求路径相反的顺序执行网络筛选器链。<br><img src="https://www.envoyproxy.io/docs/envoy/v1.22.6/_images/lor-network-write.svg"></li>
+<li>5.HTTP 连接管理器中的 HTTP/2 编解码器，对来自 TLS 连接的解密数据流进行解帧和解复用，使其成为若干独立的数据流。每个流处理一个请求和响应。</li>
+<li>6.对于每个 HTTP 请求流，都会创建并运行一个 HTTP 过滤器链。该请求首先通过可以读取和修改请求的 CustomFilter。路由过滤器是最重要的 HTTP 过滤器，它位于 HTTP 过滤器链的末尾。在路由过滤器上调用 decodeHeaders 时，将选择路由和集群。数据流上的请求头被转发到该集群中的上游端点。路由过滤器通过从集群管理器中匹配到的集群获取 HTTP 连接池，以执行操作。<br><img src="https://www.envoyproxy.io/docs/envoy/v1.22.6/_images/lor-http-filters.svg"></li>
+<li>7.执行集群特定的负载均衡以查找端点。通过检查集群的断路器，来确定是否允许新的数据流。如果端点的连接池为空或容量不足，则会创建到端点的新连接。</li>
+<li>8.上游端点连接的 HTTP/2 编解码器，将请求流与通过单个 TCP 连接流，向上游的任何其他流，进行多路复用和帧化。</li>
+<li>9.上游端点连接的 TLS 传输套接字，对这些字节进行加密，并将其写入上游连接的 TCP 套接字。<br><img src="https://www.envoyproxy.io/docs/envoy/v1.22.6/_images/lor-client.svg"></li>
+<li>10.由请求头、可选的请求体和尾部组成的请求，在上游被代理，而响应在下游被代理。响应以与请求相反的顺序，通过 HTTP 过滤器，从路由器过滤器开始并通过自定义过滤器，然后再发送到下游。</li>
+<li>11.当响应完成后，请求流将被销毁。请求后，处理程序将更新统计信息，写入访问日志并最终确定追踪 span。</li>
 </ul>
-</blockquote>
-<h1 id="连接"><a href="#连接" class="headerlink" title="连接"></a>连接</h1><h2 id="验证：确保被加载的类的正确性"><a href="#验证：确保被加载的类的正确性" class="headerlink" title="验证：确保被加载的类的正确性"></a>验证：确保被加载的类的正确性</h2><p>验证是连接阶段的第一步，这一阶段的目的是为了确保Class文件的字节流中包含的信息符合当前虚拟机的要求，并且不会危害虚拟机自身的安全。</p>
-<blockquote>
-<p>确保加载的类符合 JVM 规范和安全，保证被校验类的方法在运行时不会做出危害虚拟机的事件，其实就是一个安全检查。</p>
-</blockquote>
-<p>验证阶段大致会完成4个阶段的检验动作:</p>
-<ul>
-<li>文件格式验证：验证字节流是否符合Class文件格式的规范；</li>
-<li>元数据验证：对字节码描述的信息进行语义分析，以保证其描述的信息符合Java语言规范的要求；</li>
-<li>字节码验证：通过数据流和控制流分析，确定程序语义是合法的、符合逻辑的；</li>
-<li>符号引用验证：确保解析动作能正确执行。</li>
-</ul>
-<blockquote>
-<p>验证阶段是非常重要的，但不是必需的，它对程序运行期没有影响，如果所引用的类经过反复验证，那么可以考虑采用<code>-Xverifynone</code>参数来关闭大部分的类验证措施，以缩短虚拟机类加载的时间。</p>
-</blockquote>
-<h2 id="准备：为类的静态变量分配内存，并将其初始化为默认值"><a href="#准备：为类的静态变量分配内存，并将其初始化为默认值" class="headerlink" title="准备：为类的静态变量分配内存，并将其初始化为默认值"></a>准备：为类的静态变量分配内存，并将其初始化为默认值</h2><p>准备阶段是正式为类变量分配内存并设置类变量初始值的阶段，这些内存都将在方法区中分配。需要注意以下几点：</p>
-<ul>
-<li>这时候进行内存分配的仅包括类变量(static)，而不包括实例变量，实例变量会在对象实例化时随着对象一块分配在Java堆中；</li>
-<li>这里所设置的初始值通常情况下是数据类型默认的零值(如<code>0</code>、<code>0L</code>、<code>null</code>、<code>false</code>等)，而不是被在Java代码中被显式地赋予的值。</li>
-</ul>
-<p>假设一个类变量的定义为: <code>public static int value = 3；</code>那么变量value在准备阶段过后的初始值为<code>0</code>，而不是<code>3</code>，因为这时候尚未开始执行任何Java方法，而把value赋值为3的<code>put static</code>指令是在程序编译后，存放于类构造器<code>&lt;clinit&gt;()</code>方法之中的，所以把value赋值为3的动作将在初始化阶段才会执行。</p>
-<h2 id="解析：把类中的符号引用转换为直接引用"><a href="#解析：把类中的符号引用转换为直接引用" class="headerlink" title="解析：把类中的符号引用转换为直接引用"></a>解析：把类中的符号引用转换为直接引用</h2><p>解析阶段是虚拟机将常量池内的符号引用替换为直接引用的过程，解析动作主要针对<code>类</code>或<code>接口</code>、<code>字段</code>、<code>类方法</code>、<code>接口方法</code>、<code>方法类型</code>、<code>方法句柄</code>和<code>调用点限定符</code>7类符号引用进行。</p>
-<p>符号引用是指一组符号来描述目标，可以是任何字面量，例如<code>import java.util.ArrayList</code>；直接引用是直接指向目标的指针、相对偏移量或一个间接定位到目标的句柄，引用对象一定在内存进行。</p>
-<h1 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h1><p>初始化，为类的静态变量赋予正确的初始值，JVM负责对类进行初始化，主要对类变量进行初始化。在Java中对类变量进行初始值设定有两种方式:</p>
-<ul>
-<li>声明类变量是指定初始值</li>
-<li>使用静态代码块为类变量指定初始值</li>
-</ul>
-<blockquote>
-<p>初始化其实就是执行类构造器方法的<code>&lt;clinit&gt;()</code>的过程，而且要保证执行前父类的<code>&lt;clinit&gt;()</code>方法执行完毕。这个方法由编译器收集，顺序执行所有类变量（static修饰的成员变量）显式初始化和静态代码块中语句。此时准备阶段时的那个 s<code>tatic int value</code> 由默认初始化的0变成了显式初始化的3。 由于执行顺序缘故，初始化阶段类变量如果在静态代码块中又进行了更改，会覆盖类变量的显式初始化，最终值会为静态代码块中的赋值。</p>
-</blockquote>
-<blockquote>
-<p>字节码文件中初始化方法有两种，非静态资源初始化的<code>&lt;init&gt;</code>和静态资源初始化的<code>&lt;clinit&gt;</code>，这些方法都是字节码文件中只能给JVM识别的特殊方法。</p>
-</blockquote>
-<h2 id="初始化步骤"><a href="#初始化步骤" class="headerlink" title="初始化步骤"></a>初始化步骤</h2><ul>
-<li>假如这个类还没有被加载和连接，则程序先加载并连接该类；</li>
-<li>假如该类的直接父类还没有被初始化，则先初始化其直接父类；</li>
-<li>假如类中有初始化语句，则系统依次执行这些初始化语句</li>
-</ul>
-<h2 id="类初始化时机"><a href="#类初始化时机" class="headerlink" title="类初始化时机"></a>类初始化时机</h2><p>只有当对类的主动使用的时候才会导致类的初始化，主动使用包括以下六种：</p>
-<ul>
-<li>创建类的实例，也就是new的方式 </li>
-<li>访问某个类或接口的静态变量，或者对该静态变量赋值 </li>
-<li>调用类的静态方法 </li>
-<li>反射(如Class.forName(“com.pdai.jvm.Test”)) </li>
-<li>初始化某个类的子类，则其父类也会被初始化</li>
-<li>Java虚拟机启动时被标明为启动类的类(Java Test)，直接使用java.exe命令来运行某个主类</li>
-</ul>
-<h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>类访问方法区内的数据结构的接口， 对象是Heap区的数据。</p>
-<h1 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h1><p>GC将无用对象从内存中卸载</p>
-<p>结束生命周期的几种情况：</p>
-<ul>
-<li>执行了System.exit()方法</li>
-<li>程序正常执行结束</li>
-<li>程序在执行过程中遇到了异常或错误而异常终止</li>
-<li>由于操作系统出现错误而导致Java虚拟机进程终止</li>
-</ul>
-<h1 id="类加载器的加载顺序（层次）"><a href="#类加载器的加载顺序（层次）" class="headerlink" title="类加载器的加载顺序（层次）"></a>类加载器的加载顺序（层次）</h1><p><img src="https://raw.githubusercontent.com/zodical416/picto/master/20220206154019.png"></p>
-<p><img src="https://raw.githubusercontent.com/zodical416/picto/master/20220206154839.png"></p>
-<h1 id="JVM类加载机制"><a href="#JVM类加载机制" class="headerlink" title="JVM类加载机制"></a>JVM类加载机制</h1><ul>
-<li><p>全盘负责：</p>
-<p>当一个类加载器负责加载某个Class时，该Class所依赖的和引用的其他Class也将由该类加载器负责载入，除非显示使用另外一个类加载器来载入</p>
-</li>
-<li><p>父类委托：</p>
-<p>先让父类加载器试图加载该类，只有在父类加载器无法加载该类时才尝试从自己的类路径中加载该类</p>
-</li>
-<li><p>缓存机制：</p>
-<p>缓存机制将会保证所有加载过的Class都会被缓存，当程序中需要使用某个Class时，类加载器先从缓存区寻找该Class，只有缓存区不存在，系统才会读取该类对应的二进制数据，并将其转换成Class对象，存入缓存区。这就是为什么修改了Class后，必须重启JVM，程序的修改才会生效</p>
-</li>
-<li><p>双亲委派机制</p>
-<p>如果一个类加载器收到了类加载的请求，它首先不会自己去尝试加载这个类，而是把请求委托给父加载器去完成，依次向上。因此，所有的类加载请求最终都应该被传递到顶层的启动类加载器中，只有当父加载器在它的搜索范围中没有找到所需的类时，即无法完成该加载，子加载器才会尝试自己去加载该类。</p>
 </li>
 </ul>
-<h2 id="双亲委派机制的过程"><a href="#双亲委派机制的过程" class="headerlink" title="双亲委派机制的过程"></a>双亲委派机制的过程</h2><ol>
-<li>当AppClassLoader加载一个class时，它首先不会自己去尝试加载这个类，而是把类加载请求委派给父类加载器ExtClassLoader去完成。</li>
-<li>当ExtClassLoader加载一个class时，它首先也不会自己去尝试加载这个类，而是把类加载请求委派给BootStrapClassLoader去完成。</li>
-<li>如果BootStrapClassLoader加载失败(例如在<code>$JAVA_HOME/jre/lib</code>里未查找到该class)，会使用ExtClassLoader来尝试加载；</li>
-<li>若ExtClassLoader也加载失败，则会使用AppClassLoader来加载，如果AppClassLoader也加载失败，则会报出异常ClassNotFoundException。</li>
-</ol>
-<h2 id="双亲委派的优势"><a href="#双亲委派的优势" class="headerlink" title="双亲委派的优势"></a>双亲委派的优势</h2><ul>
-<li>系统类防止内存中出现多份同样的字节码</li>
-<li>保证Java程序安全稳定运行</li>
-</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>Envoy 的核心在于对业务透明的请求拦截，Iptables 等将拦截后的流量转发到 Envoy，Envoy 对拦截的请求进行一定的安全访问控制、流量调度等。通过使用 Envoy，使开发者可以专注于应用功能的开发，而不用考虑复杂的网络通讯。</p>
+<p>参考资料：<br>1.<a target="_blank" rel="noopener" href="https://www.envoyproxy.io/">https://www.envoyproxy.io/</a><br>2.<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzU4MjQ0MTU4Ng==&amp;mid=2247510233&amp;idx=1&amp;sn=ad8899b9cec7f8617a084ba4f2a5b998&amp;chksm=fdbaa7c4cacd2ed2e103c90e09a780b25955acdb087042434d05ddb0c1bb0089d187b1c12667&amp;scene=178&amp;cur_album_id=1616316605645258755#rd">https://mp.weixin.qq.com/s?__biz=MzU4MjQ0MTU4Ng==&amp;mid=2247510233&amp;idx=1&amp;sn=ad8899b9cec7f8617a084ba4f2a5b998&amp;chksm=fdbaa7c4cacd2ed2e103c90e09a780b25955acdb087042434d05ddb0c1bb0089d187b1c12667&amp;scene=178&amp;cur_album_id=1616316605645258755#rd</a></p>
 
                 
             </div>
@@ -576,7 +530,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2023/11/16/java-ji-chu-zhi-shi-san/">http://example.com/2023/11/16/java-ji-chu-zhi-shi-san/</a>
+                    <a href="http://example.com/2023/11/16/envoy-ji-chu/">http://example.com/2023/11/16/envoy-ji-chu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -614,12 +568,20 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/JVM/">
-                                    <span class="chip bg-color">JVM</span>
+                                <a href="/tags/Envoy/">
+                                    <span class="chip bg-color">Envoy</span>
                                 </a>
                             
-                                <a href="/tags/Java%E5%9F%BA%E7%A1%80/">
-                                    <span class="chip bg-color">Java基础</span>
+                                <a href="/tags/%E4%BB%A3%E7%90%86/">
+                                    <span class="chip bg-color">代理</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%9E%B6%E6%9E%84/">
+                                    <span class="chip bg-color">架构</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/">
+                                    <span class="chip bg-color">微服务</span>
                                 </a>
                             
                         </div>
@@ -698,70 +660,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2023/11/16/jvm-yi-nei-cun-jie-gou/">
+                <a href="/2023/11/16/envoy-ji-chu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="JVM一-内存结构">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="Envoy基础">
                         
-                        <span class="card-title">JVM一-内存结构</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-11-16
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Java/" class="post-category">
-                                    Java
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/java/">
-                        <span class="chip bg-color">java</span>
-                    </a>
-                    
-                    <a href="/tags/JVM/">
-                        <span class="chip bg-color">JVM</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2023/11/16/java-ji-chu-zhi-shi-er/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Java基础知识二">
-                        
-                        <span class="card-title">Java基础知识二</span>
+                        <span class="card-title">Envoy基础</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -778,8 +688,70 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Java%E5%9F%BA%E7%A1%80/" class="post-category">
-                                    Java基础
+                            <a href="/categories/Envoy/" class="post-category">
+                                    Envoy
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Envoy/">
+                        <span class="chip bg-color">Envoy</span>
+                    </a>
+                    
+                    <a href="/tags/%E4%BB%A3%E7%90%86/">
+                        <span class="chip bg-color">代理</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%9E%B6%E6%9E%84/">
+                        <span class="chip bg-color">架构</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/">
+                        <span class="chip bg-color">微服务</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2023/11/16/docker-jing-xiang/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Docker镜像">
+                        
+                        <span class="card-title">Docker镜像</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-11-16
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Docker/" class="post-category">
+                                    Docker
                                 </a>
                             
                             
@@ -789,16 +761,16 @@
                 
                 <div class="card-action article-tags">
                     
+                    <a href="/tags/Docker/">
+                        <span class="chip bg-color">Docker</span>
+                    </a>
+                    
+                    <a href="/tags/image%E6%9E%84%E5%BB%BA/">
+                        <span class="chip bg-color">image构建</span>
+                    </a>
+                    
                     <a href="/tags/%E5%AE%B9%E5%99%A8/">
                         <span class="chip bg-color">容器</span>
-                    </a>
-                    
-                    <a href="/tags/Java%E5%9F%BA%E7%A1%80/">
-                        <span class="chip bg-color">Java基础</span>
-                    </a>
-                    
-                    <a href="/tags/%E9%9B%86%E5%90%88/">
-                        <span class="chip bg-color">集合</span>
                     </a>
                     
                 </div>
