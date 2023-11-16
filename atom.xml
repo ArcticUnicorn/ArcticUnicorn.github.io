@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-11-15T16:49:19.620Z</updated>
+  <updated>2023-11-16T03:32:14.785Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,263 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>操作系统基础</title>
+    <link href="http://example.com/2023/11/16/cao-zuo-xi-tong-ji-chu/"/>
+    <id>http://example.com/2023/11/16/cao-zuo-xi-tong-ji-chu/</id>
+    <published>2023-11-16T03:29:32.000Z</published>
+    <updated>2023-11-16T03:32:14.785Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;什么是操作系统？&quot;&gt;&lt;a href=&quot;#什么是操作系统？&quot; class=&quot;headerlink&quot; title=&quot;什么是操作系统？&quot;&gt;&lt;/a&gt;什么是操作系统？&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;操作系统（Operating System，简称</summary>
+        
+      
+    
+    
+    
+    <category term="计算机基础" scheme="http://example.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="计算机基础" scheme="http://example.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+    
+    <category term="操作系统" scheme="http://example.com/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>计算机网络基础</title>
+    <link href="http://example.com/2023/11/16/ji-suan-ji-wang-luo-ji-chu/"/>
+    <id>http://example.com/2023/11/16/ji-suan-ji-wang-luo-ji-chu/</id>
+    <published>2023-11-16T03:25:13.000Z</published>
+    <updated>2023-11-16T03:32:55.483Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;计算机网络的分层参考模型&quot;&gt;&lt;a href=&quot;#计算机网络的分层参考模型&quot; class=&quot;headerlink&quot; title=&quot;计算机网络的分层参考模型&quot;&gt;&lt;/a&gt;计算机网络的分层参考模型&lt;/h1&gt;&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="计算机基础" scheme="http://example.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="计算机基础" scheme="http://example.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+    
+    <category term="计算机网络" scheme="http://example.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+    <category term="网络协议" scheme="http://example.com/tags/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>RabbitMQ</title>
+    <link href="http://example.com/2023/11/16/rabbitmq/"/>
+    <id>http://example.com/2023/11/16/rabbitmq/</id>
+    <published>2023-11-16T03:20:15.000Z</published>
+    <updated>2023-11-16T03:21:41.947Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;什么是-MQ&quot;&gt;&lt;a href=&quot;#什么是-MQ&quot; class=&quot;headerlink&quot; title=&quot;什么是 MQ&quot;&gt;&lt;/a&gt;什么是</summary>
+        
+      
+    
+    
+    
+    <category term="中间件" scheme="http://example.com/categories/%E4%B8%AD%E9%97%B4%E4%BB%B6/"/>
+    
+    
+    <category term="Rabbit MQ" scheme="http://example.com/tags/Rabbit-MQ/"/>
+    
+    <category term="消息中间件" scheme="http://example.com/tags/%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Redis</title>
+    <link href="http://example.com/2023/11/16/redis/"/>
+    <id>http://example.com/2023/11/16/redis/</id>
+    <published>2023-11-16T03:17:49.000Z</published>
+    <updated>2023-11-16T03:18:46.796Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;什么是-Redis&quot;&gt;&lt;a href=&quot;#什么是-Redis&quot; class=&quot;headerlink&quot; title=&quot;什么是 Redis&quot;&gt;&lt;/a&gt;什么是 Redis&lt;/h1&gt;&lt;p&gt;Redis 就是一个使用 C</summary>
+        
+      
+    
+    
+    
+    <category term="数据库" scheme="http://example.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+    <category term="数据库" scheme="http://example.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    <category term="Redis" scheme="http://example.com/tags/Redis/"/>
+    
+    <category term="缓存" scheme="http://example.com/tags/%E7%BC%93%E5%AD%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MySQL数据库</title>
+    <link href="http://example.com/2023/11/16/mysql-shu-ju-ku/"/>
+    <id>http://example.com/2023/11/16/mysql-shu-ju-ku/</id>
+    <published>2023-11-16T03:13:35.000Z</published>
+    <updated>2023-11-16T03:14:43.413Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;数据库三大范式&quot;&gt;&lt;a href=&quot;#数据库三大范式&quot; class=&quot;headerlink&quot; title=&quot;数据库三大范式&quot;&gt;&lt;/a&gt;数据库三大范式&lt;/h1&gt;&lt;h2 id=&quot;第一范式（无重复的列）&quot;&gt;&lt;a href=&quot;#第一范式（无重复的列）&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="数据库" scheme="http://example.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+    <category term="MySQL" scheme="http://example.com/tags/MySQL/"/>
+    
+    <category term="数据库" scheme="http://example.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java并发四-AQS</title>
+    <link href="http://example.com/2023/11/16/java-bing-fa-si-aqs/"/>
+    <id>http://example.com/2023/11/16/java-bing-fa-si-aqs/</id>
+    <published>2023-11-16T03:08:02.000Z</published>
+    <updated>2023-11-16T03:09:09.452Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;什么是-AQS&quot;&gt;&lt;a href=&quot;#什么是-AQS&quot; class=&quot;headerlink&quot; title=&quot;什么是 AQS&quot;&gt;&lt;/a&gt;什么是 AQS&lt;/h1&gt;&lt;p&gt;AQS 就是一个抽象类，主要用来构建锁和同步器，使用 AQS</summary>
+        
+      
+    
+    
+    
+    <category term="Java" scheme="http://example.com/categories/Java/"/>
+    
+    
+    <category term="Java" scheme="http://example.com/tags/Java/"/>
+    
+    <category term="并发" scheme="http://example.com/tags/%E5%B9%B6%E5%8F%91/"/>
+    
+    <category term="多线程" scheme="http://example.com/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java并发三-锁</title>
+    <link href="http://example.com/2023/11/16/java-bing-fa-san-suo/"/>
+    <id>http://example.com/2023/11/16/java-bing-fa-san-suo/</id>
+    <published>2023-11-16T03:01:19.000Z</published>
+    <updated>2023-11-16T03:02:14.447Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;Java提供了种类丰富的锁，每种锁因其特性的不同，在适当的场景下能够展现出非常高的效率。&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="Java" scheme="http://example.com/categories/Java/"/>
+    
+    
+    <category term="Java" scheme="http://example.com/tags/Java/"/>
+    
+    <category term="并发" scheme="http://example.com/tags/%E5%B9%B6%E5%8F%91/"/>
+    
+    <category term="多线程" scheme="http://example.com/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java并发二-底层原理</title>
+    <link href="http://example.com/2023/11/16/java-bing-fa-er-di-ceng-yuan-li/"/>
+    <id>http://example.com/2023/11/16/java-bing-fa-er-di-ceng-yuan-li/</id>
+    <published>2023-11-16T02:59:43.000Z</published>
+    <updated>2023-11-16T03:00:54.385Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Synchronized-关键字&quot;&gt;&lt;a href=&quot;#Synchronized-关键字&quot; class=&quot;headerlink&quot; title=&quot;Synchronized 关键字&quot;&gt;&lt;/a&gt;Synchronized 关键字&lt;/h1&gt;&lt;p&gt;synchronized</summary>
+        
+      
+    
+    
+    
+    <category term="Java" scheme="http://example.com/categories/Java/"/>
+    
+    
+    <category term="Java" scheme="http://example.com/tags/Java/"/>
+    
+    <category term="并发" scheme="http://example.com/tags/%E5%B9%B6%E5%8F%91/"/>
+    
+    <category term="多线程" scheme="http://example.com/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java并发一-基础知识</title>
+    <link href="http://example.com/2023/11/16/java-bing-fa-yi-ji-chu-zhi-shi/"/>
+    <id>http://example.com/2023/11/16/java-bing-fa-yi-ji-chu-zhi-shi/</id>
+    <published>2023-11-16T02:51:22.000Z</published>
+    <updated>2023-11-16T02:53:57.405Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;什么是线程和进程？&quot;&gt;&lt;a href=&quot;#什么是线程和进程？&quot; class=&quot;headerlink&quot; title=&quot;什么是线程和进程？&quot;&gt;&lt;/a&gt;什么是线程和进程？&lt;/h1&gt;&lt;h2 id=&quot;进程&quot;&gt;&lt;a href=&quot;#进程&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Java" scheme="http://example.com/categories/Java/"/>
+    
+    
+    <category term="Java" scheme="http://example.com/tags/Java/"/>
+    
+    <category term="并发" scheme="http://example.com/tags/%E5%B9%B6%E5%8F%91/"/>
+    
+    <category term="多线程" scheme="http://example.com/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>JVM二-垃圾回收</title>
